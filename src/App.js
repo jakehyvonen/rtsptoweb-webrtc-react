@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import VideoThing from './VideoThing';
+import WebRTCVideo from './WebRTCVideo';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <VideoThing></VideoThing>
+      <WebRTCVideo></WebRTCVideo>
     </div>
   );
 }

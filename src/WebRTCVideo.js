@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class VideoThing extends React.Component {
+export default class WebRTCVideo extends React.Component {
     componentDidMount(){
         function startPlay (videoEl, url) {
             const webrtc = new RTCPeerConnection({
@@ -61,7 +61,7 @@ export default class VideoThing extends React.Component {
                 <input type="hidden" name="webrtc-url" id="webrtc-url"
                     value="http://localhost:8083/stream/pattern/channel/0/webrtc"></input>
 
-                <video id="webrtc-video" autoPlay playsInline controls
+                <video id="webrtc-video" autoPlay muted playsInline controls
                     style={{maxWidth: "100%", maxHeight: "100%"}}></video>
             </div>
         );
