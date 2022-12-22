@@ -4,9 +4,11 @@ export default class WebRTCVideo extends React.Component {
     componentDidMount(){
         function startPlay (videoEl, url) {
             const webrtc = new RTCPeerConnection({
-            iceServers: [{
-                urls: ['stun:stun.l.google.com:19302']
-            }],
+            iceServers: [
+                {
+                    urls: ['stun:stun.l.google.com:19302']
+                }
+            ],
             sdpSemantics: 'unified-plan'
             })
             webrtc.ontrack = function (event) {
@@ -59,7 +61,7 @@ export default class WebRTCVideo extends React.Component {
                 <h1>RTSPtoWeb WebRTC example</h1>
 
                 <input type="hidden" name="webrtc-url" id="webrtc-url"
-                    value="http://localhost:8083/stream/pattern/channel/0/webrtc"></input>
+                    value="http://localhost:8083/stream/amcrest-mobile/channel/0/webrtc"></input>
 
                 <video id="webrtc-video" autoPlay muted playsInline controls
                     style={{maxWidth: "100%", maxHeight: "100%"}}></video>
